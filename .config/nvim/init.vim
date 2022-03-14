@@ -14,6 +14,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
 Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
+Plug 'neoclide/coc.nvim',{'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
@@ -90,7 +91,8 @@ set noshowcmd
 
 " Open corresponding .pdf/.html or preview
 	map <leader>p :!opout <c-r>%<CR><CR>
-
+" Coc autocompletion"
+	source $HOME/.config/nvim/plug-config/coc.vim
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
 
